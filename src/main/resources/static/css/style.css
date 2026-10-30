@@ -1,0 +1,80 @@
+html,
+body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(46, 86, 87);
+    color: white;
+    font-style: oblique;
+}
+
+h1 {
+    color: rgb(219, 101, 101);
+}
+
+h2 {
+    color: rgb(13, 214, 2);
+}
+
+a {
+    color: lightblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(13, 214, 2);
+}
+
+form button {
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(77, 125, 77);
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: rgb(67, 108, 67);
+}
+
+form fieldset {
+    margin-block-end: 10px;
+}
+
+footer {
+    margin-top: auto;
+    padding-block-end: 1rem;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.book-header {
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    color: rgb(13, 214, 2);
+}
+
+.book-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    color: rgb(167, 245, 175);
+}
+
+.book-list li {
+    border-bottom: 1px solid #ddd;
+}

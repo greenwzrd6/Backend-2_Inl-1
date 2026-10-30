@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="sv" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <title>
+        Davids bokklubb
+    </title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+
+<body>
+    <h1>Välkommen till Davids bokklubb!</h1>
+    <h2>Dagens datum och tid är: <span th:text="${date}">Datum och tid</span></h2>
+    <a href="books">Visa boklista</a>
+</body>
+
+</html>

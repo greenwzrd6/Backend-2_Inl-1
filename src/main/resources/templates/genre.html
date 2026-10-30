@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sv" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <title>
+        Davids bokklubb
+    </title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+
+<body>
+    <h1>Filtrera böcker efter genre</h1>
+    <form th:action="@{/genre}">
+        <fieldset>
+            <legend>Genrer</legend>
+
+            <label th:each="g : ${allGenres}">
+                <input type="checkbox" name="type" th:value="${g}" />
+                <span th:text="${g}">Genre</span>
+            </label>
+        </fieldset>
+        <button type="submit">Filtrera</button>
+    </form>
+    <div class="full-book-list">
+        <div class="book-grid book-header">
+            <span>Titel</span>
+            <span>Författare</span>
+            <span>Genre</span>
+        </div>
+        <ul class="book-list">
+            <li class="book-grid" th:each="book : ${books}">
+                <span th:text="${book.title}" style="
+                margin-inline: 0.25rem;
+            ">Boktitel</span>
+                <span th:text="${book.author}" style="
+                margin-inline: 0.25rem;
+            ">Författare</span>
+                <span th:text="${book.genre}" style="
+                margin-inline: 0.25rem;
+            ">Genre</span>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <a href="books">Visa hela boklistan</a>
+        <a href="home">Tillbaka till startsidan</a>
+    </footer>
+</body>
+
+</html>
